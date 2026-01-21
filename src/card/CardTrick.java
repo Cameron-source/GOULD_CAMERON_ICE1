@@ -19,7 +19,7 @@ public class CardTrick {
     public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
-        Scanner input = new Scanner(System.in);
+        
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
@@ -35,14 +35,12 @@ public class CardTrick {
                  
         boolean found = false;
        
-        Card guess = new Card();
-        System.out.print("Enter a card value (1-13): ");
-        guess.setValue(input.nextInt()); 
-        System.out.print("Please Enter card suit (0-3 where 0=Hearts, 1=Diamonds, 2=Spades, 3=Clubs): ");
-        guess.setSuit(input.nextInt());
+        Card luckyCard = new Card();
+        luckyCard.setSuit(3);
+        luckyCard.setValue(6);
         for (Card card : magicHand)
         {
-            if((card.getSuit()).equals(guess.getSuit()) && card.getValue() == guess.getValue())
+            if((card.getSuit()).equals(luckyCard.getSuit()) && card.getValue() == luckyCard.getValue())
             {
                 found = true;
                 
