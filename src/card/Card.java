@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package card;
-
+//991788225
 /**
  * A class that models playing card Objects. Cards have 
  * a value (note that Ace = 1, Jack -11, Queen =12, King = 13)
@@ -12,6 +12,7 @@ package card;
  * This code is to be used in ICE1. When you create your own branch,
  * add your name as a modifier.
  * @author srinivsi
+ * @modifier cameron
  */
 public class Card {
 
@@ -31,6 +32,9 @@ public class Card {
      */
     public void setSuit(String suit) {
         this.suit = suit;
+    }
+    public void setSuit(int suit) {
+        this.suit = SUITS[suit];
     }
 
     /**
